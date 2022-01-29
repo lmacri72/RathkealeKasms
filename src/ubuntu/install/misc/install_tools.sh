@@ -8,4 +8,5 @@ if [ "$DISTRO" = centos ]; then
 else
   apt-get update
   apt-get install -y nano zip xdotool
+  apt-get install -y mousepad
 fi
