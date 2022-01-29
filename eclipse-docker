@@ -28,6 +28,10 @@ RUN apt-get update && apt-get install -y default-jdk default-jre
 COPY ./src/ubuntu/install/eclipse $INST_SCRIPTS/eclipse
 RUN bash $INST_SCRIPTS/eclipse/install_eclipse.sh && rm -rf $INST_SCRIPTS/eclipse/
 
+### Install TKP
+COPY ./src/ubuntu/install/tkp $INST_SCRIPTS/tkp
+RUN bash $INST_SCRIPTS/tkp/install_tkp.sh && rm -rf $INST_SCRIPTS/tkp/
+
 ### Remove maxmius
 RUN apt-get remove -y maximus
 
