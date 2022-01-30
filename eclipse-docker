@@ -25,8 +25,8 @@ RUN bash $INST_SCRIPTS/chrome/install_chrome.sh  && rm -rf $INST_SCRIPTS/chrome/
 RUN apt-get update && apt-get install -y default-jdk default-jre
 
 ### Install Eclipse
-COPY ./src/ubuntu/install/eclipse $INST_SCRIPTS/eclipse
-RUN bash $INST_SCRIPTS/eclipse/install_eclipse.sh && rm -rf $INST_SCRIPTS/eclipse/
+#COPY ./src/ubuntu/install/eclipse $INST_SCRIPTS/eclipse
+#RUN bash $INST_SCRIPTS/eclipse/install_eclipse.sh && rm -rf $INST_SCRIPTS/eclipse/
 
 ### Install TKP
 COPY ./src/ubuntu/install/tkp $INST_SCRIPTS/tkp
